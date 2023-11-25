@@ -2,3 +2,15 @@
     display: flex;
     border: 3px solid red;
 }
+
+.item {
+    display: flex;
+}
+
+.item > div {
+    margin: 10px 15px;
+}
+
+.options div:first-child {
+    margin-right: 15px;
+}
