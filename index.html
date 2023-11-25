@@ -22,11 +22,20 @@
         <label for="secondGuess">Zweite eigene Schätzung:</label>
         <input type="text" id="secondGuess" name="secondGuess"><br><br>
         <label for="sold">Verkauft:</label>
-        <input type="text" id="sold" name="sold"><br><br>
+        <input type="checkbox" id="sold" name="sold"><br><br>
         <label for="soldPrice">Endverkauf:</label>
         <input type="text" id="soldPrice" name="soldPrice"><br><br>
         <label for="winner">Gewinner*in:</label>
-        <input type="text" id="winner" name="winner"><br><br>
+        <fieldset>
+          <div>
+            <input type="radio" id="Mert" name="mert" value="Mert" />
+            <label for="mert">Mert</label>
+          </div> 
+          <div>
+            <input type="radio" id="Malwine" name="malwine" value="Malwine" />
+            <label for="malwine">Malwine</label>
+          </div>
+        </fieldset>
         <button id="saveButton" type="submit">Speichern</button>
       </form>
     </div>
