@@ -14,3 +14,11 @@
 .options div:first-child {
     margin-right: 15px;
 }
+
+#saveButton {
+    cursor: pointer;
+}
+
+.options > div {
+    cursor: pointer;
+}
