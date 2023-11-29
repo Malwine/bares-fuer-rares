@@ -13,7 +13,7 @@ let acceptData = () => {
     itemData["expertisePrice"] = expertisePrice.value;
     itemData["firstGuess"] = firstGuess.value;
     itemData["secondGuess"] = secondGuess.value;
-    itemData["sold"] = sold.value;
+    itemData["sold"] = sold.checked;
     itemData["soldPrice"] = soldPrice.value;
     //itemData["winner"] = winner.value;
 }
