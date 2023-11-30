@@ -13,30 +13,20 @@
     <div class="left">
       <h1>Bares für Rares</h1>
       <form id="inputContainer">
-        <label for="itemName">Produkt:</label>
+        <label for="itemName">Exponat:</label>
         <input type="text" id="itemName" name="itemName"><br><br>
-        <label for="expertisePrice">Expertise Schätzung: </label>
+        <label for="expertisePrice">Wert nach Expertise: </label>
         <input type="text" id="expertisePrice" name="expertisePrice"><br><br>
-        <label for="firstGuess">Erste eigene Schätzung:</label>
+        <label for="firstGuess">1. Schätzung:</label>
         <input type="text" id="firstGuess" name="firstGuess"><br><br>
-        <label for="secondGuess">Zweite eigene Schätzung:</label>
+        <label for="secondGuess">2. Schätzung:</label>
         <input type="text" id="secondGuess" name="secondGuess"><br><br>
         <label for="sold">Verkauft:</label>
         <input type="checkbox" id="sold" name="sold"><br><br>
         <label for="soldPrice">Endverkauf:</label>
         <input type="text" id="soldPrice" name="soldPrice"><br><br>
-        <label for="winner">Gewinner*in:</label>
-        <fieldset>
-          <div>
-            <input type="radio" id="Mert" name="winner" value="Mert" />
-            <label for="mert">Mert</label>
-          </div> 
-          <div>
-            <input type="radio" id="Malwine" name="winner" value="Malwine" />
-            <label for="malwine">Malwine</label>
-          </div>
-        </fieldset>
         <button id="saveButton" type="submit">Speichern</button>
+        <!-- <button id="saveButton" type="button">Editieren</button> -->
       </form>
     </div>
 
@@ -47,9 +37,20 @@
           <div class="expertisePrice">600-800</div>
           <div class="firstGuess">690</div>
           <div class="secondGuess">750</div>
-          <div class="sold">Ja</div>
+          <div class="sold"><i class="fas fa-check-square"></i></div>
           <div class="soldPrice">550</div>
-          <div class="winner">Mert</div>
+          <div class="options">
+            <div class="fas fa-edit"></div>
+            <div class="fas fa-trash-alt"></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="itemName">Brosche</div>
+          <div class="expertisePrice">70-100</div>
+          <div class="firstGuess">50</div>
+          <div class="secondGuess">75</div>
+          <div class="sold"><i class="fas fa-minus-square"></i></i></div>
+          <div class="soldPrice">-</div>
           <div class="options">
             <div class="fas fa-edit"></div>
             <div class="fas fa-trash-alt"></div>
