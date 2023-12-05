@@ -1,14 +1,23 @@
 .container {
     display: flex;
-    border: 3px solid red;
+    border: 2px solid violet;
+}
+
+.items {
+    width: 600px;
 }
 
 .item {
     display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.item .itemName {
+        width: 100px;
 }
 
 .item > div {
-    margin: 10px 15px;
 }
 
 .options div:first-child {
@@ -22,3 +31,19 @@
 .options > div {
     cursor: pointer;
 }
+
+.left {
+    width: 50%;
+    border: 2px solid orange;
+}
+
+#inputContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#inputContainer > * {
+    width: 49%;
+    margin-bottom: 2%;
+}
+
