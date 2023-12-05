@@ -6,7 +6,6 @@ let firstGuess = document.getElementById("firstGuess");
 let secondGuess = document.getElementById("secondGuess");
 let sold = document.getElementById("sold");
 let soldPrice = document.getElementById("soldPrice");
-let winner = document.getElementById("winner");
 
 let acceptData = () => {
     itemData["itemName"] = itemName.value;
@@ -15,7 +14,6 @@ let acceptData = () => {
     itemData["secondGuess"] = secondGuess.value;
     itemData["sold"] = sold.checked;
     itemData["soldPrice"] = soldPrice.value;
-    //itemData["winner"] = winner.value;
 }
 
 form.addEventListener("submit", (e) => {
