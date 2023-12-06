@@ -18,6 +18,11 @@
 }
 
 .item > div {
+    width: 50px;
+}
+
+.options {
+    display: flex;
 }
 
 .options div:first-child {

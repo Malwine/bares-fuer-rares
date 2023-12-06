@@ -20,15 +20,15 @@ let acceptData = () => {
 }
 
 let renderItems = () => {
-    let lastItemIndex = items.length-1;
+    let lastItem = items[items.length-1];
     itemList.innerHTML +=
         `<div class="item">
-            <div class="itemName">${items[lastItemIndex].itemName}</div>
-            <div class="expertisePrice">${items[lastItemIndex].expertisePrice}</div>
-            <div class="firstGuess">ooo</div>
-            <div class="secondGuess">ooo</div>
-            <div class="sold"><i class="fas fa-check-square"></i></div>
-            <div class="soldPrice">ooo</div>
+            <div class="itemName">${lastItem.itemName}</div>
+            <div class="expertisePrice">${lastItem.expertisePrice}</div>
+            <div class="firstGuess">${lastItem.firstGuess}</div>
+            <div class="secondGuess">${lastItem.secondGuess}</div>
+            <div class="sold">${ lastItem.sold ? "<i class=\"fas fa-check-square\"></i>" : "<i class=\"fas fa-minus-square\"></i>" }</div>
+            <div class="soldPrice">${lastItem.sold ? lastItem.soldPrice : ""}</div>
             <div class="options">
             <div class="fas fa-edit"></div>
             <div class="fas fa-trash-alt"></div>
