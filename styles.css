@@ -14,11 +14,11 @@
 }
 
 .item .itemName {
-        width: 100px;
+    width: 100px;
 }
 
 .item > div {
-    width: 50px;
+    width: 70px;
 }
 
 .options {
@@ -52,3 +52,15 @@
     margin-bottom: 2%;
 }
 
+.expertisePrice {
+    display: flex;
+    gap: 10px;
+}
+
+.expertisePrice > * {
+    width: 50%;
+}
+
+#message {
+    color: red;
+}

@@ -15,8 +15,11 @@
       <form id="inputContainer">
         <label for="itemName">Exponat:</label>
         <input type="text" id="itemName" name="itemName"><br><br>
-        <label for="expertisePrice">Wert nach Expertise: </label>
-        <input type="text" id="expertisePrice" name="expertisePrice"><br><br>
+        <label for="expertisePrice">Wert nach Expertise (min - max): </label>
+        <div class="expertisePrice">
+          <input type="text" id="exMin" name="exMin">
+          <input type="text" id="exMax" name="exMax">
+        </div>
         <label for="firstGuess">1. Schätzung:</label>
         <input type="text" id="firstGuess" name="firstGuess"><br><br>
         <label for="secondGuess">2. Schätzung:</label>
@@ -28,6 +31,7 @@
         <button id="saveButton" type="submit">Speichern</button>
         <!-- <button id="saveButton" type="button">Editieren</button> -->
       </form>
+      <div id="message"></div>
     </div>
 
     <div class="right">
