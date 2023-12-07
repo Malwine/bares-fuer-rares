@@ -1,6 +1,6 @@
 .container {
     display: flex;
-    border: 2px solid violet;
+    gap: 30px;
 }
 
 .items {
@@ -39,7 +39,6 @@
 
 .left {
     width: 50%;
-    border: 2px solid orange;
 }
 
 #inputContainer {
