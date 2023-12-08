@@ -32,12 +32,33 @@ let clearForm = () => {
     form.reset();
 }
 
+/* 
+ *  This function deletes the given item from UI and items array. 
+ */
+function deleteItem(itemName) {
+    // Remove item from user interface
+    let itemToDelete = document.getElementById(itemName);
+    itemToDelete.remove();
+
+    // Remove item from items array
+    for(let i = 0; i < items.length; i++){ // loop items to find object
+        if (items[i].itemName == itemName){
+            console.log("items array before removing:")
+            console.log(items);
+            items.splice(i, 1); 
+            console.log("items array after removing:")
+            console.log(items);
+            break;
+        }
+    }
+}
+
 let renderItems = () => {
     if(items.length-1 >= 0) {
         let lastItem = items[items.length-1];
         console.log("Füge hinzu: ", lastItem)
         itemList.innerHTML +=
-            `<div class="item">
+            `<div class="item" id="${lastItem.itemName}">
                 <div class="itemName">${lastItem.itemName}</div>
                 <div class="expertisePrice">${lastItem.exMin} - ${lastItem.exMax}</div>
                 <div class="firstGuess">${lastItem.firstGuess}</div>
@@ -45,8 +66,8 @@ let renderItems = () => {
                 <div class="sold">${ lastItem.sold ? "<i class=\"fas fa-check-square\"></i>" : "<i class=\"fas fa-minus-square\"></i>" }</div>
                 <div class="soldPrice">${lastItem.sold ? lastItem.soldPrice : "-"}</div>
                 <div class="options">
-                <div class="fas fa-edit"></div>
-                <div class="fas fa-trash-alt"></div>
+                    <button class="fas fa-edit" id="${lastItem.itemName}" type="submit"></button>
+                    <button class="fas fa-trash-alt" id="${lastItem.itemName}" onclick="deleteItem(this.id)"></button>
                 </div>
             </div>`;
         clearForm();
