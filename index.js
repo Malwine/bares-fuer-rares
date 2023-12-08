@@ -21,6 +21,10 @@ let acceptData = () => {
         itemData["sold"] = sold.checked;
         itemData["soldPrice"] = soldPrice.value;
         items.push(itemData);
+        renderItems();
+    } else {
+        message.innerHTML = "Eingabe ungültig";
+        console.log("Could not create item")
     }
 }
 
@@ -29,8 +33,9 @@ let clearForm = () => {
 }
 
 let renderItems = () => {
-    if(items.length-1 > 0) {
+    if(items.length-1 >= 0) {
         let lastItem = items[items.length-1];
+        console.log("Füge hinzu: ", lastItem)
         itemList.innerHTML +=
             `<div class="item">
                 <div class="itemName">${lastItem.itemName}</div>
@@ -45,13 +50,10 @@ let renderItems = () => {
                 </div>
             </div>`;
         clearForm();
-    } else {
-        message.innerHTML = "Eingabe ungültig";
     }
 }
 
 form.addEventListener("submit", (e) => {
     e.preventDefault(); 
     acceptData();
-    renderItems();
 })
