@@ -25,13 +25,7 @@ let acceptData = () => {
 }
 
 let clearForm = () => {
-    itemName.value = "";
-    exMin.value = "";
-    exMax.value = "";
-    firstGuess.value = "";
-    secondGuess.value = "";
-    sold.checked = false;
-    soldPrice.value = "";
+    form.reset();
 }
 
 let renderItems = () => {
