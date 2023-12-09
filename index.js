@@ -1,6 +1,7 @@
 let form = document.getElementById("inputContainer");
 let itemList = document.getElementById("items");
 let items = [];
+let id = 0;
 let itemName = document.getElementById("itemName");
 let exMin = document.getElementById("exMin");
 let exMax = document.getElementById("exMax");
@@ -13,6 +14,7 @@ let message = document.getElementById("message");
 let acceptData = () => {
     if (itemName.value !== "") {
         let itemData = {};
+        itemData["id"] = id;
         itemData["itemName"] = itemName.value;
         itemData["exMin"] = exMin.value;
         itemData["exMax"] = exMax.value;
@@ -22,6 +24,7 @@ let acceptData = () => {
         itemData["soldPrice"] = soldPrice.value;
         items.push(itemData);
         renderItems();
+        id++;
     } else {
         message.innerHTML = "Eingabe ungültig";
         console.log("Could not create item")
@@ -35,15 +38,15 @@ let clearForm = () => {
 /* 
  *  This function deletes the given item from UI and items array. 
  */
-function deleteItem(itemName) {
+function deleteItem(itemId) {
     // Remove item from user interface
-    let itemToDelete = document.getElementById(itemName);
+    let itemToDelete = document.getElementById(itemId);
     itemToDelete.remove();
 
     // Remove item from items array
     for(let i = 0; i < items.length; i++){ // loop items to find object
-        if (items[i].itemName == itemName){
-            console.log("items array before removing:")
+        if (items[i].id == itemId){
+            console.log("items array before removing:");
             console.log(items);
             items.splice(i, 1); 
             console.log("items array after removing:")
@@ -58,7 +61,7 @@ let renderItems = () => {
         let lastItem = items[items.length-1];
         console.log("Füge hinzu: ", lastItem)
         itemList.innerHTML +=
-            `<div class="item" id="${lastItem.itemName}">
+            `<div class="item" id="${lastItem.id}">
                 <div class="itemName">${lastItem.itemName}</div>
                 <div class="expertisePrice">${lastItem.exMin} - ${lastItem.exMax}</div>
                 <div class="firstGuess">${lastItem.firstGuess}</div>
@@ -66,8 +69,8 @@ let renderItems = () => {
                 <div class="sold">${ lastItem.sold ? "<i class=\"fas fa-check-square\"></i>" : "<i class=\"fas fa-minus-square\"></i>" }</div>
                 <div class="soldPrice">${lastItem.sold ? lastItem.soldPrice : "-"}</div>
                 <div class="options">
-                    <button class="fas fa-edit" id="${lastItem.itemName}" type="submit"></button>
-                    <button class="fas fa-trash-alt" id="${lastItem.itemName}" onclick="deleteItem(this.id)"></button>
+                    <button class="fas fa-edit" id="${lastItem.id}" type="submit"></button>
+                    <button class="fas fa-trash-alt" id="${lastItem.id}" onclick="deleteItem(this.id)"></button>
                 </div>
             </div>`;
         clearForm();
