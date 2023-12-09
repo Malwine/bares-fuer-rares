@@ -17,17 +17,17 @@
         <input type="text" id="itemName" name="itemName"><br><br>
         <label for="expertisePrice">Wert nach Expertise (min - max): </label>
         <div class="expertisePrice">
-          <input type="text" id="exMin" name="exMin" placeholder="min">
-          <input type="text" id="exMax" name="exMax" placeholder="max">
+          <input type="number" step=10 id="exMin" name="exMin" placeholder="min">
+          <input type="number" step=10 id="exMax" name="exMax" placeholder="max">
         </div>
         <label for="firstGuess">1. Schätzung:</label>
-        <input type="text" id="firstGuess" name="firstGuess"><br><br>
+        <input type="number" step=10 id="firstGuess" name="firstGuess"><br><br>
         <label for="secondGuess">2. Schätzung:</label>
-        <input type="text" id="secondGuess" name="secondGuess"><br><br>
+        <input type="number" step=10 id="secondGuess" name="secondGuess"><br><br>
         <label for="sold">Verkauft:</label>
         <input type="checkbox" id="sold" name="sold"><br><br>
         <label for="soldPrice">Endverkauf:</label>
-        <input type="text" id="soldPrice" name="soldPrice"><br><br>
+        <input type="number" step=10 id="soldPrice" name="soldPrice"><br><br>
         <button id="saveButton" type="submit">Speichern</button>
         <!-- <button id="saveButton" type="button">Editieren</button> -->
       </form>
