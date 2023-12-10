@@ -12,6 +12,7 @@ let soldPrice = document.getElementById("soldPrice");
 let message = document.getElementById("message");
 
 let acceptData = () => {
+    message.innerHTML = "";
     if (itemName.value !== "") {
         let itemData = {};
         itemData["id"] = id;
